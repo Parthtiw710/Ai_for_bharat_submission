@@ -1,1 +1,0 @@
-# Ai_for_bharat_submission
