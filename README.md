@@ -64,6 +64,7 @@ CREATE INDEX idx_context ON submissions USING GIN (user_context);
 - Pattern-based urgency detection
 
 ### AI Layer (ADK & Vertex AI)
+- Scheduled (Daily/Biweekly/Weekly) processing.
 - Semantic theme clustering
 - Intent extraction & urgency classification
 - Prioritized recommendation synthesis
@@ -111,20 +112,6 @@ GET    /api/v1/health        # Health check
 | **Preprocessing** | Idempotent batching · Rollback on failure · Status tracking |
 | **AI Agent** | Direct LLM calls · JSON mode · 2-retry backoff |
 | **Database** | PostgreSQL 17 · JSONB + relational · GIN indexes |
-
----
-
-## 🏗️ Quick Start
-
-```bash
-git clone <repo-url> && cd feedback-intelligence
-cp .env.example .env  # Add LLM_API_KEY
-docker-compose up -d
-psql $DATABASE_URL < migrations/001_create_tables.sql
-curl http://localhost:3000/api/v1/health
-```
-
-**Services**: API (`:3000`) · AI Agent (`:3001`) · PostgreSQL (`:5432`)
 
 ---
 
