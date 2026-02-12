@@ -63,7 +63,7 @@ CREATE INDEX idx_context ON submissions USING GIN (user_context);
 - Statistical sentiment scoring
 - Pattern-based urgency detection
 
-### AI Layer (GPT-4o-mini / Claude 3.5 Haiku)
+### AI Layer (ADK & Vertex AI)
 - Semantic theme clustering
 - Intent extraction & urgency classification
 - Prioritized recommendation synthesis
@@ -106,11 +106,11 @@ GET    /api/v1/health        # Health check
 
 | Component | Details |
 |-----------|---------|
-| **Widget** | Vanilla JS · 12KB gzipped · Client-side validation |
+| **Widget** | React iife js file · CDN deliverry· Client-side validation |
 | **Unified API** | Express · Connection pool (10) · Node-cron scheduler |
 | **Preprocessing** | Idempotent batching · Rollback on failure · Status tracking |
 | **AI Agent** | Direct LLM calls · JSON mode · 2-retry backoff |
-| **Database** | PostgreSQL 15 · JSONB + relational · GIN indexes |
+| **Database** | PostgreSQL 17 · JSONB + relational · GIN indexes |
 
 ---
 
