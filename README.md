@@ -14,7 +14,7 @@ Widget (JSON Schema) → Unified API → PostgreSQL (JSONB) → AI Agent → Ins
 
 **Stack**: Node.js · Express · PostgreSQL · OpenAI/Anthropic · Docker
 
-**Components**: 2 services + 1 database (optimized for 24-36h hackathon deployment)
+**Components**: 2 services + 1 database
 
 ---
 
